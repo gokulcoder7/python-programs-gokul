@@ -1,0 +1,45 @@
+#7
+#13 2 4 15 12 10 5          even index with descending_and_oddindex_ascending
+
+
+
+def so(ar,n):
+    
+    
+    s=sorted(ar)
+    print("sort4ed==",s)
+    num=n//2
+    od=s[:num]
+    ev=s[ num:]
+    ev.sort(reverse=True)
+    
+
+    print("od=",od)
+    print("ev=",ev)
+        
+
+
+
+
+
+    even_pr=0
+    odd=0
+    res=[0]*n
+    for i in range(n):
+        print("i=",i)
+        if i%2==0:
+            print("even_pr==",even_pr," \t")
+            res[i]=ev[even_pr]
+            
+            
+            even_pr+=1
+        else:
+            res[i]=od[odd]
+            odd+=1
+        print("ans=",res)
+
+    return res
+n=int(input())   
+l=[int(item) for item in input().split()]
+
+x=so(l,n)
